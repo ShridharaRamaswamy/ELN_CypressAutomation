@@ -1,0 +1,490 @@
+{
+
+
+  "TC01": {
+    "name": "Automation1",
+    "priority": "Medium"
+  },
+
+  "TC02":{
+
+    "update":"_update",
+    "updatedname": "Automation1_update",
+    "col_locator": "td[aria-label*='column header Project Name']"
+
+  },
+
+  "TC06":{
+    "tagname": "Tag11"
+  },
+
+  "TC07":{
+    "tagname": "Tag1"
+  },
+  "TC08":{
+
+    "sd":"13-08-2022",
+    "dd":"12-08-2022"
+  },
+
+  "TC09":{
+    "dd":"12-08-2022"
+  },
+
+  "TC12":{
+    "name":"Low_Prority_Project",
+    "priority": "Low"
+  },
+
+  "TC13":{
+    "name":"Medium_Prority_Project",
+    "priority": "Medium"
+  },
+
+  "TC14":{
+    "name":"High_Prority_Project",
+    "priority": "High"
+  },
+
+  "TC15":{
+    "name":"Urgent_Prority_Project",
+    "priority": "Urgent"
+  },
+
+  "TC16":{
+    "name":"Duplicate_Project",
+    "priority": "Medium",
+    "samename":"duplicate_project"
+
+  },
+
+  "TC17":{
+
+    "name":"Status_Project1",
+    "priority":"Medium",
+    "state1":"Created",
+    "state2":"InProgress",
+    "state3":"Blocked",
+    "state4":"Archived",
+    "check_loc":":nth-child(3) > .m-0"
+
+  },
+
+  "TC43": {
+    "name": "automation_singleuser",
+    "priority": "Medium",
+    "collaboratorlist":[
+      "Shridhara"
+    ],
+    "role":"Project Owner"
+  },
+
+  "TC44": {
+    "name": "automation_multipleuser",
+    "priority": "Medium",
+    "collaboratorlist":[
+      "Shridhara",
+      "kushbu"
+    ],
+    "role":"Project Owner"
+  },
+
+  "TC45": {
+    "name": "automation_singlegroup",
+    "priority": "Medium",
+    "grouplist":[
+      "testing group"
+    ],
+    "role":"Project Owner"
+  },
+
+  "TC46": {
+    "name": "automation_alluser",
+    "priority": "Medium",
+    "collaboratorlist":[],
+    "role":"Project Owner"
+  },
+
+  "TC47": {
+    "name": "automation_edituser",
+    "priority": "Medium",
+    "collaboratorlist":[
+      "Shridhara"
+    ],
+    "editlist":[
+      "Manoj"
+    ],
+    "role":"Project Owner"
+  },
+
+  
+  "TC48": {
+    "name": "automation_editgroup",
+    "priority": "Medium",
+    "collaboratorlist":[
+      "Shridhara"
+    ],
+    "editlist":[
+      "dev"
+    ],
+    "role":"Project Owner"
+  },
+
+  "TC49": {
+    "name": "automation_removuesr",
+    "priority": "Medium",
+    "grouplist":[
+      "Testing Group"
+    ],
+    "role":"Project Owner"
+  },
+
+  "TC50": {
+    "name": "automation_grupfilter",
+    "grouplist":[
+      "Testing Group",
+      "dev"
+    ],
+    "role":"Project Reasearcher"
+  },
+
+  "TC51": {
+    "name": "automation_invalid",
+    "invalidname": "xyz invalid",
+    "role":"Project Reasearcher",
+    "collaboratorlist":[
+      "Shridhara",
+      "Manoj Shiva",
+      "Jomon"
+    ]
+   
+  },
+
+  "TC52":{
+
+    "name":"TestAutomation_TC52_testproject",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC52_testtask"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara",
+      "Manoj Shiva"
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+  "TC55":{
+
+    "name":"TestAutomation_TC55_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC55_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara",
+      "Manoj Shiva"
+     
+    ],
+    "blocknamelist":[
+      "Instruction"
+    ]
+  },
+
+  
+
+  "TC56":{
+
+    "name":"TestAutomation_TC56_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC56_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+
+
+  "TC57":{
+
+    "name":"TestAutomation_TC57_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC57_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+
+  "TC58":{
+
+    "name":"TestAutomation__TC58_testproject",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC58_testtask"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+
+  "TC60":{
+
+    "name":"TestAutomation_TC60_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC60_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+
+  
+  "TC62":{
+
+    "name":"TestAutomation_TC62_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC62_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara",
+      "Manoj shiva",
+      "Jomon"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+
+   
+  "TC63":{
+
+    "name":"TestAutomation_TC63_testproject",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC63_testtask"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "Shridhara",
+      "Manoj Shiva"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ]
+  },
+
+  "TC68":{
+
+    "name":"TestAutomation_TC68_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC68_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "shridhara ramaswamy",
+      "Manoj Shiva",
+      "Jomon"
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ],
+
+    "taskUserList":[
+      "shridhara ramaswamy"
+
+    ]
+  },
+
+
+  "TC75":{
+
+    "name":"TestAutomation_TC75_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC75_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "shridhara ramaswamy"
+    
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ],
+
+    "taskUserList":[
+      "shridhara ramaswamy"
+
+    ]
+  },
+
+  "TC81":{
+
+    "name":"TestAutomation_TC81_project",
+    "priority": "Medium",
+    "templatename": "Experiment New",
+    "taskname":"TestAutomation_TC81_task"  ,
+    "desc":"User Scheduling Automation Testing",
+    "collaboratorlist":[
+      "shridhara ramaswamy"
+     
+     
+    ],
+    "blocknamelist":[
+      "General"
+    ],
+
+    "taskUserList":[
+      "shridhara ramaswamy"
+
+    ]
+  },
+
+  "TC87":{
+
+    "conditionlist":[
+      "shridhara",
+      "ramaswamy",
+      "rama",
+      "shridhara ramaswamy"
+    ]
+
+  },
+
+  "TC88":{
+
+    "conditionlist":[
+      "10-12-2022"
+     
+    ]
+
+  },
+
+  "TC91":{
+
+    "conditionlist":[
+
+      "Experiment",
+      "Owner",
+      "Experiment Owner"
+
+    ]
+
+  },
+
+  "all":{
+    "Project_Owner": "Owner Name",
+    "Project_Manager": 0,
+    "Tagname": "autoTag",
+    "Description": "Testing Addition of Project",
+    "loc_priority": "[aria-label=' is template cell column header Priority']",
+    "loc_Projname": "td[aria-label*='column header Project Name']",
+    "loc_state":"td[aria-label*='column header State']",
+    "loc_sdate":"td[aria-label*='column header Start Date']",
+    "loc_id":"td[aria-label*='column header Project Id']",
+    "loc_daysleft":"td[aria-label*='column header Days Left']",
+    "loc_expname":"td[aria-label*='column header Experiment Name']",
+    "loc_username":"td[aria-label*='column header User Name']",
+    "loc_acptstartdate":"td[aria-label*='column header Start Date']",
+    "loc_acptenddate":"td[aria-label*='column header End Date']",
+    "loc_acptduration":"td[aria-label*='column header Duration']",
+    "loc_acptrole":"td[aria-label*='column header Role Name']"
+    
+  },
+
+  "filtercondition":{
+    "startwith": 1,
+    "endwith":2,
+    "contains":3,
+    "equal":4,
+    "NotEqual": 5
+  },
+
+  "StartDatefiltercondition":{
+    "equal": 1,
+    "GreaterThan":2,
+    "GreaterThanEqual": 3,
+    "LessThan": 4,
+    "LessThanEqual": 5,
+    "Not_Equal": 6
+
+  },
+
+  "filtercolumn":{
+    "project":"Project Name",
+    "priority":"Priority",
+    "State": "State",
+    "StartDate":"Start Date",
+    "projectid":"Project Id",
+    "daysleft":"Days Left",
+    "username":"User Name",
+    "acptstartdate":"Start Date",
+    "acptenddate":"End Date",
+    "acptduration": "Duration",
+    "acptrolename": "Role Name"
+
+
+  },
+
+  "filtervalues":{
+    "tc18": "testing",
+    "tc19": 1,
+    "tc20":"shri",
+    "tc21":"test",
+    "tc29":"16-11-2022",
+    "tc30":"16-11-2022",
+    "tc31": "16-11-2022",
+    "tc32": "16-11-2022",
+    "tc33": "16-11-2022",
+    "tc34": 0,
+    "tc35":4,
+    "tc36":20,
+    "tc37":200,
+    "tc38":20
+  },
+
+  "Priority":{
+    "Low": "Low",
+    "High": "High",
+    "Medium": "Medium",
+    "Urgent":"Urgent"
+
+  },
+
+  "State":{
+    "Created":"Created",
+    "InProgress":"InProgress",
+    "Blocked":"Blocked",
+    "Completed":"Completed",
+    "Archived":"Archived"
+  }
+
+  
+
+  
+  }
+  
