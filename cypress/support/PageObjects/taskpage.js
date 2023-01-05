@@ -402,6 +402,11 @@ class taskpage {
         return cy.get("div[class='e-flmenu-valuediv'] input[id*='ej2-datepicker']")
     }
 
+    errorMsg() {
+        return cy.get("div[class*='align-items-center justify-content-center']")
+    }
+
+
 
 
 }

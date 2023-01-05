@@ -15,11 +15,14 @@ import logoutpage from '../../support/PageObjects/logoutpage'
 describe('ELN Project Suite', function () {
 
     this.beforeAll(function () {
-        
-        cy.clearLocalStorage()
-        cy.removeLocalStorage()
+
+        // cy.clearLocalStorage()
+        // cy.removeLocalStorage()
         cy.login(Cypress.env('email'), Cypress.env('password'))
         cy.wait(4000)
+        // cy.testdatacreation()
+        // cy.testdatadeletion()
+
     })
 
     this.beforeEach(function () {
@@ -28,11 +31,11 @@ describe('ELN Project Suite', function () {
         })
         cy.restoreLocalStorage()
 
-        
+
 
     })
     this.afterAll(function () {
-        
+
         cy.clearCookies()
         cy.clearLocalStorage()
         cy.removeLocalStorage()
@@ -45,7 +48,7 @@ describe('ELN Project Suite', function () {
 
 
     it('TC01_ELN_Addition of Project', function () {
-       
+
         cy.wait(3000)
         const projectPage = new projectpage()
         cy.CreateProj(this.data.TC01.name, this.data.TC01.priority)
@@ -67,7 +70,7 @@ describe('ELN Project Suite', function () {
         const projectPage = new projectpage()
         cy.get('a[href="/eln-webapp-test/elndev/dashboard"]').click()
         cy.Updateproj(this.data.TC01.name)
-        cy.Filtering(this.data.TC01.name, this.data.TC02.updatedname, this.data.TC02.col_locator)
+        cy.Filtering(this.data.TC02.updatedname, this.data.TC02.updatedname, this.data.TC02.col_locator)
         cy.wait(3000)
         projectPage.selectProject().eq(1).click()
 
@@ -321,7 +324,7 @@ describe('ELN Project Suite', function () {
 
     it('TC20_ELN_Project Name Filter Check with contains condition', function () {
 
-        cy.FilterCheck(this.data.filtercolumn.project, this.data.filtervalues.tc20, this.data.filtercondition.contains, this.data.all.loc_Projname)
+        cy.FilterCheck1(this.data.filtercolumn.project, this.data.filtervalues.tc20, this.data.filtercondition.contains, this.data.all.loc_Projname)
         cy.clearfilter(this.data.filtercolumn.project)
     })
 
@@ -329,6 +332,18 @@ describe('ELN Project Suite', function () {
 
         cy.FilterCheck(this.data.filtercolumn.project, this.data.filtervalues.tc21, this.data.filtercondition.equal, this.data.all.loc_Projname)
         cy.clearfilter(this.data.filtercolumn.project)
+    })
+
+    it('TC34_ELN_Project ID Filter Check with endwith condition', function () {
+
+        cy.FilterCheck(this.data.filtercolumn.projectid, this.data.filtervalues.tc34, this.data.filtercondition.endwith, this.data.all.loc_id)
+        cy.clearfilter(this.data.filtercolumn.projectid)
+    })
+
+    it('TC35_ELN_Project ID Filter Check with contains condition', function () {
+
+        cy.FilterCheck(this.data.filtercolumn.projectid, this.data.filtervalues.tc35, this.data.filtercondition.contains, this.data.all.loc_id)
+        cy.clearfilter(this.data.filtercolumn.projectid)
     })
 
     it('TC22_ELN_Priority Filter Check with High condition', function () {
@@ -373,46 +388,40 @@ describe('ELN Project Suite', function () {
     })
 
     it('TC29_ELN_Start Date Filter Check with Equal condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.StartDate, this.data.filtervalues.tc29, this.data.StartDatefiltercondition.equal, this.data.all.loc_sdate)
+        const dayjs = require("dayjs");
+        var sdate = dayjs().format("DD-MM-YYYY")
+        cy.FilterCheck(this.data.filtercolumn.StartDate, sdate, this.data.StartDatefiltercondition.equal, this.data.all.loc_sdate)
         cy.clearfilter(this.data.filtercolumn.StartDate)
     })
 
     it('TC30_ELN_Start Date Filter Check with GreaterThan condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.StartDate, this.data.filtervalues.tc30, this.data.StartDatefiltercondition.GreaterThan, this.data.all.loc_sdate)
+        const dayjs = require("dayjs");
+        var sdate = dayjs().add(1, 'days').format("DD-MM-YYYY")
+        cy.FilterCheck(this.data.filtercolumn.StartDate, sdate, this.data.StartDatefiltercondition.GreaterThan, this.data.all.loc_sdate)
         cy.clearfilter(this.data.filtercolumn.StartDate)
     })
 
     it('TC31_ELN_Start Date Filter Check with GreaterThanEqual condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.StartDate, this.data.filtervalues.tc31, this.data.StartDatefiltercondition.GreaterThanEqual, this.data.all.loc_sdate)
+        const dayjs = require("dayjs");
+        var sdate = dayjs().add(2, 'days').format("DD-MM-YYYY")
+        cy.FilterCheck(this.data.filtercolumn.StartDate, sdate, this.data.StartDatefiltercondition.GreaterThanEqual, this.data.all.loc_sdate)
         cy.clearfilter(this.data.filtercolumn.StartDate)
     })
 
     it('TC32_ELN_Start Date Filter Check with LessThan condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.StartDate, this.data.filtervalues.tc32, this.data.StartDatefiltercondition.LessThan, this.data.all.loc_sdate)
+        const dayjs = require("dayjs");
+        var sdate = dayjs().add(5, 'days').format("DD-MM-YYYY")
+        cy.FilterCheck(this.data.filtercolumn.StartDate, sdate, this.data.StartDatefiltercondition.LessThan, this.data.all.loc_sdate)
         cy.clearfilter(this.data.filtercolumn.StartDate)
     })
 
     it('TC33_ELN_Start Date Filter Check with LessThanEqual condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.StartDate, this.data.filtervalues.tc33, this.data.StartDatefiltercondition.LessThanEqual, this.data.all.loc_sdate)
+        const dayjs = require("dayjs");
+        var sdate = dayjs().add(4, 'days').format("DD-MM-YYYY")
+        cy.FilterCheck(this.data.filtercolumn.StartDate, sdate, this.data.StartDatefiltercondition.LessThanEqual, this.data.all.loc_sdate)
         cy.clearfilter(this.data.filtercolumn.StartDate)
     })
 
-    it('TC34_ELN_Project ID Filter Check with endwith condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.projectid, this.data.filtervalues.tc34, this.data.filtercondition.endwith, this.data.all.loc_id)
-        cy.clearfilter(this.data.filtercolumn.projectid)
-    })
-
-    it('TC35_ELN_Project ID Filter Check with contains condition', function () {
-
-        cy.FilterCheck(this.data.filtercolumn.projectid, this.data.filtervalues.tc35, this.data.filtercondition.contains, this.data.all.loc_id)
-        cy.clearfilter(this.data.filtercolumn.projectid)
-    })
 
     it('TC36_ELN_Days Left Filter Check with GreaterThan condition', function () {
 
@@ -434,11 +443,12 @@ describe('ELN Project Suite', function () {
 
     it('TC39_paginaation validation', function () {
 
-        cy.pagination(5,"project")
-        cy.pagination(10,"project")
-        cy.pagination(20,"project")
-        cy.pagination(50,"project")
-        cy.pagination(100,"project")
+        cy.pagination(5, "project")
+        cy.pagination(20, "project")
+        cy.pagination(50, "project")
+        cy.pagination(100, "project")
+        cy.pagination(10, "project")
+
 
     })
 
@@ -457,11 +467,11 @@ describe('ELN Project Suite', function () {
         const projectPage = new projectpage()
 
         projectPage.clickProject().click()
-        cy.get("td[class*='e-rowcell']").eq(0).click({force: true})
+        cy.get("td[class*='e-rowcell']").eq(0).click({ force: true })
 
         const dayjs = require('dayjs')
 
-        projectPage.addproject1().eq(0).click({force: true})
+        projectPage.addproject1().eq(0).click({ force: true })
         projectPage.enterProjectName().type(this.data.TC01.name)
         cy.get(':nth-child(2) > .select').select(this.data.all.Project_Owner)
         cy.get(':nth-child(3) > .select').select(this.data.all.Project_Manager)
@@ -477,8 +487,8 @@ describe('ELN Project Suite', function () {
         projectPage.enterDescription().type(this.data.all.Description)
         cy.wait(1000)
 
-        projectPage.resetbtn().click({force: true})
-        projectPage.dialogbtn().click({force: true})
+        projectPage.resetbtn().click({ force: true })
+        projectPage.dialogbtn().click({ force: true })
         projectPage.enterProjectName().should('have.text', '')
         projectPage.enterStartDate().should('have.text', '')
         projectPage.enterDueDate().should('have.text', '')
@@ -487,43 +497,43 @@ describe('ELN Project Suite', function () {
 
     })
 
-    // it('TC42_Create project reset cancel check', function () {
-    //     const projectPage = new projectpage()
-    //     projectPage.clickProject().click()
-    //     cy.get("td[class*='e-rowcell']").eq(0).click()
+    it('TC97_Create project reset cancel check', function () {
+        const projectPage = new projectpage()
+        projectPage.clickProject().click()
+        cy.get("td[class*='e-rowcell']").eq(0).click()
 
-    //     const dayjs = require('dayjs')
-
-
-    //     projectPage.addproject1().eq(0).click()
-    //     projectPage.enterProjectName().type(this.data.TC01.name)
-    //     cy.get(':nth-child(2) > .select').select(this.data.all.Project_Owner)
-    //     cy.get(':nth-child(3) > .select').select(this.data.all.Project_Manager)
-    //     cy.wait(2000)
-    //     projectPage.enterStartDate().clear()
-    //     projectPage.enterStartDate().type(dayjs().format('DD/MM/YYYY'))
-    //     cy.wait(2000)
-    //     projectPage.enterDueDate().clear()
-    //     projectPage.enterDueDate().type(dayjs().format('DD/MM/YYYY'))
-    //     projectPage.enterTagName().type(this.data.all.Tagname)
-    //     cy.get("#" + this.data.TC01.priority).click({ force: true })
-    //     projectPage.addTag().click()
-    //     projectPage.enterDescription().type(this.data.all.Description)
-    //     cy.wait(1000)
-
-    //     projectPage.resetbtn().click()
-    //     projectPage.dialogbtn().click()
-    //     cy.wait(3000)
-    //     projectPage.enterProjectName().should('not.have.text', this.data.TC01.name)
-    //     projectPage.enterStartDate().should('have.text', dayjs().format('DD/MM/YYYY'))
-    //     projectPage.enterDueDate().should('have.text', dayjs().format('DD/MM/YYYY'))
-    //     cy.get("div[class='tagslist']").should('have.text', this.data.all.Tagname)
-    //     projectPage.enterDescription().should('have.text', this.data.all.Description)
-
-    // })
+        const dayjs = require('dayjs')
 
 
-    it('TC42_Project Naviagtion Check', function () {
+        projectPage.addproject1().eq(0).click()
+        projectPage.enterProjectName().type(this.data.TC01.name)
+        cy.get(':nth-child(2) > .select').select(this.data.all.Project_Owner)
+        cy.get(':nth-child(3) > .select').select(this.data.all.Project_Manager)
+        cy.wait(2000)
+        projectPage.enterStartDate().clear()
+        projectPage.enterStartDate().type(dayjs().format('DD/MM/YYYY'))
+        cy.wait(2000)
+        projectPage.enterDueDate().clear()
+        projectPage.enterDueDate().type(dayjs().format('DD/MM/YYYY'))
+        projectPage.enterTagName().type(this.data.all.Tagname)
+        cy.get("#" + this.data.TC01.priority).click({ force: true })
+        projectPage.addTag().click()
+        projectPage.enterDescription().type(this.data.all.Description)
+        cy.wait(1000)
+
+        projectPage.resetbtn().click()
+        cy.get('.e-footer-content > :nth-child(2)').click()
+        cy.wait(5000)
+        projectPage.enterProjectName().should('not.have.text', this.data.TC01.name)
+
+        cy.get("span[class='tags']").should('have.text', " autoTag ")
+
+        cy.get('.actionWrap > :nth-child(1)').click()
+        cy.get('.e-footer-content > :nth-child(1)').click()
+    })
+
+
+    it('TC98_Project Naviagtion Check', function () {
         const projectPage = new projectpage()
         projectPage.clickProject().click()
         cy.wait(8000)
@@ -542,6 +552,32 @@ describe('ELN Project Suite', function () {
 
 
     })
+
+    it('TC99_ELN_Start Date Filter Check with invalid format', function () {
+        const projectPage = new projectpage()
+        projectPage.clickProject().click()
+        cy.wait(5000)
+        cy.get('#grid_145880046_3 > .e-gridcontent > .e-content').scrollTo('right')
+        cy.wait(3000)
+        projectPage.projectFilter().eq(4).click({ force: true })
+        cy.wait(3000)
+        projectPage.projectFilterclear().click({ force: true })
+        cy.wait(3000)
+        projectPage.projectFilter().eq(4).click({ force: true })
+        cy.wait(2000)
+
+        cy.get("div[class='e-flmenu-valuediv'] input[id*='ej2-datepicker']").clear()
+        cy.wait(2000)
+        cy.get("div[class='e-flmenu-valuediv'] input[id*='ej2-datepicker']").type("221231")
+        cy.wait(2000)
+        projectPage.filterOK().click({ force: true })
+        cy.get('.e-toast-content').should('have.text', 'Not a valid date format')
+        cy.wait(1000)
+
+        cy.clearfilter(this.data.filtercolumn.StartDate)
+    })
+
+
 
 
 

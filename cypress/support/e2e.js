@@ -17,7 +17,6 @@
 // import './commands'
 
 import './commands'
-import './taskfunctions'
 import 'cypress-localstorage-commands'
 import 'cypress-mochawesome-reporter/register'
 

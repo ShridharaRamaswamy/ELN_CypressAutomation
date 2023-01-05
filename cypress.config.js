@@ -26,6 +26,7 @@ module.exports = defineConfig({
       return config;
     },
   },
+  requestTimeout: 15000,
   defaultCommandTimeout: 60000,
   pageLoadTimeout: 450000,
   video: false,

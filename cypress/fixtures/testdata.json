@@ -93,7 +93,7 @@
     "name": "automation_singlegroup",
     "priority": "Medium",
     "grouplist":[
-      "testing group"
+      "TestingGroup"
     ],
     "role":"Project Owner"
   },
@@ -134,7 +134,7 @@
     "name": "automation_removuesr",
     "priority": "Medium",
     "grouplist":[
-      "Testing Group"
+      "TestingGroup"
     ],
     "role":"Project Owner"
   },
@@ -142,7 +142,7 @@
   "TC50": {
     "name": "automation_grupfilter",
     "grouplist":[
-      "Testing Group",
+      "TestingGroup",
       "dev"
     ],
     "role":"Project Reasearcher"
@@ -162,14 +162,13 @@
 
   "TC52":{
 
-    "name":"TestAutomation_TC52_testproject",
+    "name":"TC52_ProjectShriELN_TestAutomation",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC52_testtask"  ,
+    "taskname":"TC52_ShriELN_TestAutomation"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
-      "Shridhara",
-      "Manoj Shiva"
+      "Shridhara"
     ],
     "blocknamelist":[
       "General"
@@ -177,10 +176,10 @@
   },
   "TC55":{
 
-    "name":"TestAutomation_TC55_project",
+    "name":"ELN_TestAutomation_TC55_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC55_task"  ,
+    "taskname":"ELN_TestAutomation_TC55_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "Shridhara",
@@ -196,10 +195,10 @@
 
   "TC56":{
 
-    "name":"TestAutomation_TC56_project",
+    "name":"ELN_TestAutomation_TC56_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC56_task"  ,
+    "taskname":"ELN_TestAutomation_TC56_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "Shridhara"
@@ -213,10 +212,10 @@
 
   "TC57":{
 
-    "name":"TestAutomation_TC57_project",
+    "name":"ELN_TestAutomation_TC57_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC57_task"  ,
+    "taskname":"ELN_TestAutomation_TC57_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "Shridhara"
@@ -229,10 +228,10 @@
 
   "TC58":{
 
-    "name":"TestAutomation__TC58_testproject",
+    "name":"ELN_TestAutomation__TC58_testproject",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC58_testtask"  ,
+    "taskname":"ELN_TestAutomation_TC58_testtask"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "Shridhara"
@@ -245,10 +244,10 @@
 
   "TC60":{
 
-    "name":"TestAutomation_TC60_project",
+    "name":"ELN_TestAutomation_TC60_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC60_task"  ,
+    "taskname":"ELN_TestAutomation_TC60_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "Shridhara"
@@ -262,10 +261,10 @@
   
   "TC62":{
 
-    "name":"TestAutomation_TC62_project",
+    "name":"ELN_TestAutomation_TC62_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC62_task"  ,
+    "taskname":"ELN_TestAutomation_TC62_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "Shridhara",
@@ -281,27 +280,27 @@
    
   "TC63":{
 
-    "name":"TestAutomation_TC63_testproject",
+    "name":"TC63_ProjectShriELN_TestAutomation",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC63_testtask"  ,
+    "taskname":"TC63_ShriTestdataAutomation"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
-      "Shridhara",
-      "Manoj Shiva"
+      "Shridhara"
+    
      
     ],
     "blocknamelist":[
-      "General"
+      "General Information"
     ]
   },
 
   "TC68":{
 
-    "name":"TestAutomation_TC68_project",
+    "name":"ELN_TestAutomation_TC68_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC68_task"  ,
+    "taskname":"ELN_TestAutomation_TC68_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "shridhara ramaswamy",
@@ -314,7 +313,9 @@
     ],
 
     "taskUserList":[
-      "shridhara ramaswamy"
+      "shridhara ramaswamy",
+      "Manoj Shiva",
+      "Jomon"
 
     ]
   },
@@ -322,10 +323,10 @@
 
   "TC75":{
 
-    "name":"TestAutomation_TC75_project",
+    "name":"ELN_TestAutomation_TC75_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC75_task"  ,
+    "taskname":"ELN_TestAutomation_TC75_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "shridhara ramaswamy"
@@ -344,10 +345,10 @@
 
   "TC81":{
 
-    "name":"TestAutomation_TC81_project",
+    "name":"ELN_TestAutomation_TC81_project",
     "priority": "Medium",
     "templatename": "Experiment New",
-    "taskname":"TestAutomation_TC81_task"  ,
+    "taskname":"ELN_TestAutomation_TC81_task"  ,
     "desc":"User Scheduling Automation Testing",
     "collaboratorlist":[
       "shridhara ramaswamy"
@@ -451,15 +452,15 @@
   },
 
   "filtervalues":{
-    "tc18": "testing",
+    "tc18": "Auto",
     "tc19": 1,
-    "tc20":"shri",
-    "tc21":"test",
-    "tc29":"16-11-2022",
+    "tc20":"testdata",
+    "tc21":"autotestdata5",
+    "tc29":"28-12-2022",
     "tc30":"16-11-2022",
-    "tc31": "16-11-2022",
-    "tc32": "16-11-2022",
-    "tc33": "16-11-2022",
+    "tc31": "28-12-2022",
+    "tc32": "29-12-2022",
+    "tc33": "29-12-2022",
     "tc34": 0,
     "tc35":4,
     "tc36":20,

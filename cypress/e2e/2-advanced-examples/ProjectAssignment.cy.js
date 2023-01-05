@@ -18,8 +18,7 @@ import logoutpage from '../../support/PageObjects/logoutpage'
 describe('ELN Project Assignment Suite', function () {
 
     this.beforeAll(function () {
-        cy.clearLocalStorage()
-        cy.removeLocalStorage()
+
         cy.login(Cypress.env('email'), Cypress.env('password'))
         cy.wait(3000)
     })
@@ -137,7 +136,7 @@ describe('ELN Project Assignment Suite', function () {
             expect(actualText.includes(this.data.TC47.name)).to.be.true
             cy.log(projID)
             projectPage.closeBtn().click()
-            cy.Updatecollbarator(this.data.TC47.name, this.data.TC47.editlist,"user")
+            cy.Updatecollbarator(this.data.TC47.name, this.data.TC47.editlist, "user")
 
         })
         cy.Filtering(this.data.TC47.name, this.data.TC47.name, this.data.all.loc_Projname)
@@ -194,7 +193,7 @@ describe('ELN Project Assignment Suite', function () {
         cy.wait(1000)
         projectPage.enterProjectName().type(this.data.TC50.name)
         cy.get(':nth-child(2) > .select').select(this.data.all.Project_Owner)
-   
+
 
         cy.addgroupCollaborator(this.data.TC50.grouplist)
         cy.wait(2000)
@@ -206,12 +205,12 @@ describe('ELN Project Assignment Suite', function () {
 
         })
 
-        
+
         projectPage.clickProject().click()
         cy.wait(2000)
         projectPage.deletebtnYes().click()
         cy.wait(2000)
-        
+
     })
 
     it('TC51_ELN_Error_Filter with invalid collabarator and group', function () {
@@ -272,10 +271,11 @@ describe('ELN Project Assignment Suite', function () {
         projectPage.collaboratorCount().should('have.text', "+0")
 
         projectPage.clickProject().click()
-        
 
-       
+
+
     })
+
 
 
 

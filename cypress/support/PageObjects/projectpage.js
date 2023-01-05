@@ -118,7 +118,7 @@ class projectpage {
     }
 
     projgridcolfilter() {
-        return cy.get("span[class='e-input-group-icon e-ddl-icon e-search-icon']")
+        return cy.get("div[class='e-flm_optrdiv'] span[class='e-input-group-icon e-ddl-icon e-search-icon']")
     }
 
     pagedropdown() {
