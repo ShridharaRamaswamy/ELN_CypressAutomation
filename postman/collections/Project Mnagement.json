@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "7c2d91ff-bc9f-4eb0-92d5-3ba6425fec66",
+		"name": "Project Mnagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "18788930-7c2d91ff-bc9f-4eb0-92d5-3ba6425fec66"
+	},
+	"item": [
+		{
+			"name": "Add Project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d3285605-c5a5-42f3-aac3-446758b55b87",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Verify Success Message\", function(){\r",
+							"    pm.expect(jsonData.isSuccess).to.be.true\r",
+							"})\r",
+							"console.log(jsonData.id)\r",
+							"let ID = jsonData.id\r",
+							"console.log(ID)\r",
+							"//pm.environment.set(\"ProjectID\",ID)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "186893b5-c800-4349-9c9b-4c1b7b1d34e1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Project_automation1\",\r\n    \"objective\": \"ProjectDC\",\r\n    \"startDate\": \"2023-01-10T18:30:00.000Z\",\r\n    \"dueDate\": \"2023-01-10T18:30:00.000Z\",\r\n    \"collaborators\": [\r\n        {\r\n            \"userId\": \"6c8d3fc6077c47faa7976c3220074bb2\"\r\n        }\r\n\r\n    ],\r\n    \"priority\": 2,\r\n    \"status\": 0,\r\n    \"tags\": [\r\n        \"test123\",\r\n        \"Test1234\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/v1/Project",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"v1",
+						"Project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fab90dc-042d-4d60-ae52-b541d628991c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Verify Success Message\", function(){\r",
+							"    pm.expect(jsonData.isSuccess).to.be.true\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify Project ID\", function(){\r",
+							"    pm.expect(jsonData.projectItem.id).to.eql(pm.environment.get(\"ProjectID\"))\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "5e57644a-065a-4157-b936-68b873928581",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/v1/Project/YG_PJ_0998",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"v1",
+						"Project",
+						"YG_PJ_0998"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "752fa253-9c22-401e-bdeb-4058dd892082",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Verify Success Message\", function(){\r",
+							"    pm.expect(jsonData.isSuccess).to.be.true\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7006e550-e337-4076-85e2-084781470709",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/v1/Project",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"v1",
+						"Project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCollection",
+			"id": "77946279-17a3-463b-a852-c3937d58e880",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/collections/18788930-90f4acc7-8966-4cf1-aeb4-12627641d89d?apikey=PMAK-63bda68abca334424cf73e6e-ef5db288450b634d90d76b4a6036912b27",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"collections",
+						"18788930-90f4acc7-8966-4cf1-aeb4-12627641d89d"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "PMAK-63bda68abca334424cf73e6e-ef5db288450b634d90d76b4a6036912b27",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEnvuronment",
+			"id": "f8949ef4-2dbe-4435-856b-06c0135c9191",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/environments/18788930-8cc0dbf6-8d34-45e3-b353-b80c18cf1478?apikey=PMAK-63bda68abca334424cf73e6e-ef5db288450b634d90d76b4a6036912b27",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"environments",
+						"18788930-8cc0dbf6-8d34-45e3-b353-b80c18cf1478"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "PMAK-63bda68abca334424cf73e6e-ef5db288450b634d90d76b4a6036912b27",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "37be59f3-41a3-4ef1-9415-ae713bcab816",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2633eb67-bae6-4a83-a988-88d81b9569cd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
