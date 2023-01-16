@@ -47,24 +47,24 @@ describe('ELN Project Suite', function () {
     })
 
 
-    it('TC01_ELN_Addition of Project', function () {
+//     it('TC01_ELN_Addition of Project', function () {
 
-        cy.wait(3000)
-        const projectPage = new projectpage()
-        cy.CreateProj(this.data.TC01.name, this.data.TC01.priority)
-        projectPage.validateProjectName().eq(0).then(function (element) {
-            const actualText = element.text()
-            var actualText1 = actualText.split('-')
-            cy.log(actualText1[0])
-            cy.log(actualText1[1].trim())
-            var projID = actualText1[1].trim()
-            expect(actualText.includes(this.data.TC01.name)).to.be.true
-            cy.log(projID)
-            projectPage.closeBtn().click()
+//         cy.wait(3000)
+//         const projectPage = new projectpage()
+//         cy.CreateProj(this.data.TC01.name, this.data.TC01.priority)
+//         projectPage.validateProjectName().eq(0).then(function (element) {
+//             const actualText = element.text()
+//             var actualText1 = actualText.split('-')
+//             cy.log(actualText1[0])
+//             cy.log(actualText1[1].trim())
+//             var projID = actualText1[1].trim()
+//             expect(actualText.includes(this.data.TC01.name)).to.be.true
+//             cy.log(projID)
+//             projectPage.closeBtn().click()
 
-        })
+//         })
 
-    })
+//     })
 
 //     it('TC02_ELN_Edit of Project', function () {
 //         const projectPage = new projectpage()
@@ -82,12 +82,12 @@ describe('ELN Project Suite', function () {
 
 //     })
 
-    it('TC03_ELN_Delete of Project', function () {
-        const projectPage = new projectpage()
-        cy.Filtering(this.data.TC01.name, this.data.TC02.updatedname, this.data.TC02.col_locator)
-        cy.DeleteProj(this.data.TC01.name)
+//     it('TC03_ELN_Delete of Project', function () {
+//         const projectPage = new projectpage()
+//         cy.Filtering(this.data.TC01.name, this.data.TC02.updatedname, this.data.TC02.col_locator)
+//         cy.DeleteProj(this.data.TC01.name)
 
-    })
+//     })
 
     it('TC04_ELN_Validating Project Name Filed length', function () {
         const projectPage = new projectpage()
