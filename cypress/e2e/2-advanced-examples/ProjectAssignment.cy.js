@@ -253,28 +253,28 @@ describe('ELN Project Assignment Suite', function () {
 
 //     })
 
-//     it('TC52_ELN_Validation_Reset Collabarator Assignment', function () {
-//         const projectPage = new projectpage()
+    it('TC52_ELN_Validation_Reset Collabarator Assignment', function () {
+        const projectPage = new projectpage()
 
-//         projectPage.clickProject().click()
-//         cy.wait(2000)
-//         projectPage.addProject().click()
-//         cy.wait(1000)
-//         projectPage.enterProjectName().type(this.data.TC51.name)
-//         cy.get(':nth-child(2) > .select').select(this.data.all.Project_Owner)
-//         cy.get(':nth-child(3) > .select').select(this.data.all.Project_Manager)
+        projectPage.clickProject().click()
+        cy.wait(2000)
+        projectPage.addProject().click()
+        cy.wait(1000)
+        projectPage.enterProjectName().type(this.data.TC51.name)
+        cy.get(':nth-child(2) > .select').select(this.data.all.Project_Owner)
+        cy.get(':nth-child(3) > .select').select(this.data.all.Project_Manager)
 
-//         cy.addCollaborator(this.data.TC51.collaboratorlist)
-//         projectPage.resetbtn().click()
-//         projectPage.deletebtnYes().click()
+        cy.addCollaborator(this.data.TC51.collaboratorlist)
+        projectPage.resetbtn().click()
+        projectPage.deletebtnYes().click()
 
-//         projectPage.collaboratorCount().should('have.text', "+0")
+        projectPage.collaboratorCount().should('have.text', "+0")
 
-//         projectPage.clickProject().click()
+        projectPage.clickProject().click()
 
 
 
-//     })
+    })
 
 
 
