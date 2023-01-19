@@ -7,7 +7,7 @@
     "test": ".\\node_modules\\.bin\\cypress run",
     "test1": "cypress run",
     "headtest": "cypress run --headed",
-    "edgetest": "npm run test -- --headed --browser edge --reporter -options saveJson=true ",
+    "edgetest": "npm run test -- --headed --browser edge --reporter-options saveJson=true",
     "Dashboardtest": "npm run test -- --headed --browser edge --record --key f24d4d75-6591-4f3a-ac69-6b54a52e4f07 --reporter mochawesome",
     "specstest": "cypress run \"CypressAutomation\\cypress\\e2e\\2-advanced-examples\\*/",
     "delete-reports": "rm('mochawesome-report/mochawesome.html','mochawesome.json','cypress/results/*json')",
