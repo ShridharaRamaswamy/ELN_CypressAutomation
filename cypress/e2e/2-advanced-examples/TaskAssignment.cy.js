@@ -32,25 +32,25 @@ describe("ELN Task Assignment Suite", function () {
     cy.saveLocalStorage();
   });
 
-//   it("TC52_ELN_Functional_User Groups not displayed at task and Block Level", function () {
-//     const taskPage = new taskpage();
+  it("TC52_ELN_Functional_User Groups not displayed at task and Block Level", function () {
+    const taskPage = new taskpage();
 
-//     cy.openproj(this.data.TC52.name)
-//     cy.Projectcheck(this.data.TC52.name, this.data.TC52.priority, this.data.TC52.collaboratorlist, "user");
+    cy.openproj(this.data.TC52.name)
+    cy.Projectcheck(this.data.TC52.name, this.data.TC52.priority, this.data.TC52.collaboratorlist, "user");
 
-//     cy.opentask(this.data.TC52.taskname)
-//     cy.Taskcheck(this.data.TC52.name, this.data.TC52.templatename, this.data.TC52.taskname);
+    cy.opentask(this.data.TC52.taskname)
+    cy.Taskcheck(this.data.TC52.name, this.data.TC52.templatename, this.data.TC52.taskname);
 
-//     cy.opentaskexecution(this.data.TC52.taskname)
+    cy.opentaskexecution(this.data.TC52.taskname)
 
-//     taskPage.expandBtn().click({ force: true });
-//     cy.wait(2000);
-//     taskPage.assignUsrGeneralBlock().click();
-//     cy.wait(4000);
-//     taskPage.userlistCheck().should("have.text", "All Users");
+    taskPage.expandBtn().click({ force: true });
+    cy.wait(2000);
+    taskPage.assignUsrGeneralBlock().click();
+    cy.wait(4000);
+    taskPage.userlistCheck().should("have.text", "All Users");
 
 
-//   });
+  });
 
 //   it("TC53_ELN_Functional_Single User - Task Assignment", function () {
 //     const taskPage = new taskpage();
